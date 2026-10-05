@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Noto+Sans+JP:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./styles.css?v=20261006-3">
 </head>
 <body>
 <main class="app">
@@ -17,34 +17,57 @@
     <div class="hero-bg"><i></i><i></i></div>
     <p class="hero-lot">LOT 1012–31</p>
     <div class="bottle-wrap">
-      <img class="bottle-art" src="./bottle.svg" alt="牛乳びん">
-      <img class="hero-cow" src="./cow.svg" alt="">
+      <img class="bottle-art" src="./bottle.svg?v=20261006-3" alt="牛乳びん">
+      <img class="hero-cow" src="./cow.svg?v=20261006-3" alt="">
       <button class="hero-hit" data-next="inspection" aria-label="ラベルを見る"></button>
     </div>
-    <p class="hero-note">ラベルを見る</p>
+    <p class="hero-note">CHECK LABEL</p>
   </section>
 
-  <section class="stage" data-stage="inspection">
-    <article class="sheet">
-      <div class="sheet-top">
-        <div><p class="mono">LABEL CHECK / 01</p><h1>ラベルを確認</h1></div>
-        <img src="./cow.svg" alt="" class="cow-mark">
+  <section class="stage product-stage" data-stage="inspection">
+    <div class="product-ghost" aria-hidden="true"></div>
+    <article class="ticket inspection-ticket">
+      <div class="ticket-head">
+        <div>
+          <p class="mono">QC / 10.12</p>
+          <h1>検品票</h1>
+        </div>
+        <img src="./cow.svg?v=20261006-3" alt="" class="cow-mark">
       </div>
-      <div class="simple-checks">
-        <button class="simple-row is-ready" data-check="0"><span>01</span><b>ラベル</b><em>CHECK</em></button>
-        <button class="simple-row" data-check="1" disabled><span>02</span><b>表示</b><em>—</em></button>
-        <button class="simple-row" data-check="2" disabled><span>03</span><b>LOT 1012–31</b><em>—</em></button>
+
+      <div class="check-list">
+        <button class="check-row is-ready" data-check="0">
+          <span class="check-no">01</span><b>外観</b><em>□</em>
+        </button>
+        <button class="check-row" data-check="1" disabled>
+          <span class="check-no">02</span><b>表示</b><em>□</em>
+        </button>
+        <button class="check-row" data-check="2" disabled>
+          <span class="check-no">03</span><b>LOT 1012–31</b><em>□</em>
+        </button>
       </div>
+
+      <div class="qc-line">
+        <span>CHECKED BY</span>
+        <span class="sign-line"></span>
+        <span>10.12</span>
+      </div>
+
       <button class="next-link" data-next="facts" hidden>裏ラベルへ <span>→</span></button>
     </article>
   </section>
 
-  <section class="stage" data-stage="facts">
-    <article class="sheet back-label">
-      <div class="sheet-top">
-        <div><p class="mono">MILK / LABEL B</p><h1>裏ラベル</h1></div>
+  <section class="stage product-stage" data-stage="facts">
+    <div class="product-ghost" aria-hidden="true"></div>
+    <article class="ticket facts-ticket">
+      <div class="ticket-head">
+        <div>
+          <p class="mono">BACK LABEL / B</p>
+          <h1>裏ラベル</h1>
+        </div>
         <span class="tiny-date">10.12</span>
       </div>
+
       <dl class="specs">
         <div><dt>種類別名称</dt><dd>牛乳</dd></div>
         <div><dt>原材料名</dt><dd>生乳 100%</dd></div>
@@ -52,23 +75,25 @@
         <div><dt>LOT</dt><dd>1012–31</dd></div>
         <div><dt>DATE</dt><dd>10.12</dd></div>
       </dl>
+
       <div class="barcode" aria-hidden="true"></div>
+      <div class="qc-stamp-small">QC<br>10.12</div>
       <button class="next-link" data-next="finale">つづきを見る <span>→</span></button>
     </article>
   </section>
 
-  <section class="stage" data-stage="finale">
+  <section class="stage product-stage" data-stage="finale">
+    <div class="product-ghost" aria-hidden="true"></div>
     <article class="final-card">
-      <p class="mono">10.12 / LOT 1012–31</p>
-      <img src="./cow.svg" alt="" class="final-cow">
+      <p class="mono">LOT 1012–31 / 10.12</p>
+      <div class="final-stamp">QC<br><span>CHECKED</span></div>
+      <img src="./cow.svg?v=20261006-3" alt="" class="final-cow">
       <h1>31歳、おめでとう。</h1>
       <p>よい一年を。</p>
       <button class="restart" aria-label="最初から">↻</button>
     </article>
   </section>
-
-  <nav class="dots" aria-hidden="true"><i class="active"></i><i></i><i></i><i></i></nav>
 </main>
-<script src="./script.js"></script>
+<script src="./script.js?v=20261006-3"></script>
 </body>
 </html>
