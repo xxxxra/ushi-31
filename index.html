@@ -55,19 +55,19 @@
           </div>
           <img src="./cow.svg" alt="" class="cow-mark" />
         </div>
-        <p class="lead">3項目を順に確認してください。</p>
+        <p class="lead">3つ、順番に。</p>
         <div class="checks">
           <button class="check-row is-ready" data-check="0">
-            <span class="num">01</span><span class="check-text"><b>外観検査</b><small>容器・ラベル</small></span><span class="result">TAP</span>
+            <span class="num">01</span><span class="check-text"><b>ラベル</b><small>見た目</small></span><span class="result">CHECK</span>
           </button>
           <button class="check-row" data-check="1" disabled>
-            <span class="num">02</span><span class="check-text"><b>成分表示</b><small>記載内容</small></span><span class="result">WAIT</span>
+            <span class="num">02</span><span class="check-text"><b>表示</b><small>内容</small></span><span class="result">—</span>
           </button>
           <button class="check-row" data-check="2" disabled>
-            <span class="num">03</span><span class="check-text"><b>ロット照合</b><small>製造記録</small></span><span class="result">WAIT</span>
+            <span class="num">03</span><span class="check-text"><b>LOT</b><small>1012–31</small></span><span class="result">—</span>
           </button>
         </div>
-        <button class="paper-link" data-next="facts" hidden>表示票をめくる <span>→</span></button>
+        <button class="paper-link" data-next="facts" hidden>裏面へ <span>→</span></button>
       </article>
     </section>
 
@@ -85,21 +85,21 @@
           <div><dt>原材料名</dt><dd>生乳 100%</dd></div>
           <div><dt>内容量</dt><dd>900 mL</dd></div>
           <div><dt>ロット</dt><dd>1012–31</dd></div>
-          <div><dt>保存方法</dt><dd>大切に保管</dd></div>
+          <div><dt>製造日</dt><dd>10.12</dd></div>
         </dl>
         <div class="barcode" aria-hidden="true"></div>
         <div class="facts-foot"><span>SAMPLE 01</span><span>QC / 10.12</span></div>
-        <button class="paper-link" data-next="finale">最終検印へ <span>→</span></button>
+        <button class="paper-link" data-next="finale">最後へ <span>→</span></button>
       </article>
     </section>
 
     <section class="stage" data-stage="finale" aria-label="最終検査結果">
       <article class="paper finale">
-        <div class="stamp" aria-hidden="true"><span>FINAL</span><strong>合格</strong><span>10.12</span></div>
-        <p class="mono final-code">APPROVED / LOT 1012–31</p>
-        <h2>31歳、<br>おめでとう。</h2>
-        <p class="final-message">今年も品質に問題ありません。<br>よい一年を。</p>
-        <div class="enclosure"><span>ENCLOSURE</span><b>同梱品があります。</b></div>
+        <div class="stamp" aria-hidden="true"><span>LOT 1012–31</span><strong>10.12</strong><span>CHECKED</span></div>
+        <p class="mono final-code">SPECIAL LABEL / 31</p>
+        <h2>31歳、おめでとう。</h2>
+        <p class="final-message">よい一年を。</p>
+        <div class="enclosure"><span>IN THE BOX</span><b>箱の中も、どうぞ。</b></div>
         <p class="signoff">QUALITY CONTROL / 10.12</p>
         <button class="restart" type="button" aria-label="最初から見る">↻</button>
       </article>
