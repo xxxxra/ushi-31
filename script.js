@@ -20,13 +20,13 @@ rows.forEach((row,index)=>{
     row.classList.remove('is-ready');
     row.classList.add('is-done');
     row.disabled=true;
-    row.querySelector('.result').textContent=index===2?'一致 ✓':'適合 ✓';
+    row.querySelector('.result').textContent='DONE';
     checked++;
     if(checked<rows.length){
       const next=rows[checked];
       next.disabled=false;
       next.classList.add('is-ready');
-      next.querySelector('.result').textContent='TAP';
+      next.querySelector('.result').textContent='CHECK';
     }else{
       document.querySelector('[data-stage="inspection"] .paper-link').hidden=false;
     }
@@ -38,7 +38,7 @@ document.querySelector('.restart').addEventListener('click',()=>{
   rows.forEach((row,index)=>{
     row.classList.remove('is-done','is-ready');
     row.disabled=index!==0;
-    row.querySelector('.result').textContent=index===0?'TAP':'WAIT';
+    row.querySelector('.result').textContent=index===0?'CHECK':'—';
   });
   rows[0].classList.add('is-ready');
   document.querySelector('[data-stage="inspection"] .paper-link').hidden=true;
