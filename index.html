@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#f2eee5" />
+  <meta name="theme-color" content="#f1ede4" />
   <title>MILK / LOT 1012-31</title>
   <meta name="description" content="LOT 1012-31 品質表示" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,20 +18,32 @@
       <div class="lot">LOT 1012–31</div>
     </header>
 
-    <section class="stage is-active" data-stage="hero" aria-label="牛乳ラベル">
-      <div class="hero-photo">
-        <img src="./assets/bottle.webp" alt="手描きの牛が描かれた牛乳びん" />
-        <div class="glass-sheen"></div>
+    <section class="stage hero is-active" data-stage="hero" aria-label="牛乳ラベル">
+      <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="bottle-scene">
+        <div class="bottle-shadow"></div>
+        <div class="bottle">
+          <div class="cap"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="neck"></div>
+          <div class="glass">
+            <div class="milk"></div>
+            <div class="shine"></div>
+            <div class="label">
+              <p class="label-top">NATURAL MILK</p>
+              <p class="label-est">LOT 1012–31</p>
+              <img src="./cow.svg" alt="" class="label-cow" />
+              <div class="label-title">MILK</div>
+              <div class="label-jp">成 分 無 調 整</div>
+              <div class="label-rule"></div>
+              <div class="label-small">FRESH AND PURE<br>FROM NATURE</div>
+              <button class="bottle-action" data-next="inspection">
+                <span>900 mL</span><span>CHECK LABEL ↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="hero-copy">
-        <div class="mini-cow-wrap"><img class="mini-cow" src="./assets/cow.webp" alt="" /></div>
-        <p class="eyebrow">MILK / 900 mL</p>
-        <h1>ラベルを<br>ご確認ください。</h1>
-        <button class="label-button" data-next="inspection">
-          <span>CHECK LABEL</span><span aria-hidden="true">↗</span>
-        </button>
-      </div>
-      <p class="hint">ラベルをめくるように進みます</p>
+      <p class="tap-hint">ラベルをタップしてご確認ください</p>
     </section>
 
     <section class="stage" data-stage="inspection" aria-label="品質検査票">
@@ -41,7 +53,7 @@
             <p class="mono">FORM QC–1012 / A</p>
             <h2>品質検査票</h2>
           </div>
-          <img src="./assets/cow.webp" alt="" class="cow-mark" />
+          <img src="./cow.svg" alt="" class="cow-mark" />
         </div>
         <p class="lead">3項目を順に確認してください。</p>
         <div class="checks">
@@ -66,7 +78,7 @@
             <p class="mono">PRODUCT SPECIFICATION / B</p>
             <h2>品質表示</h2>
           </div>
-          <img src="./assets/cow.webp" alt="" class="cow-mark" />
+          <img src="./cow.svg" alt="" class="cow-mark" />
         </div>
         <dl class="spec-list">
           <div><dt>種類別名称</dt><dd>牛乳</dd></div>
