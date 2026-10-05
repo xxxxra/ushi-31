@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#f2eee5" />
+  <title>MILK / LOT 1012-31</title>
+  <meta name="description" content="LOT 1012-31 品質表示" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Noto+Sans+JP:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app" aria-live="polite">
+    <header class="topbar">
+      <div class="status"><span class="dot"></span>QUALITY LABEL</div>
+      <div class="lot">LOT 1012–31</div>
+    </header>
+
+    <section class="stage is-active" data-stage="hero" aria-label="牛乳ラベル">
+      <div class="hero-photo">
+        <img src="./assets/bottle.webp" alt="手描きの牛が描かれた牛乳びん" />
+        <div class="glass-sheen"></div>
+      </div>
+      <div class="hero-copy">
+        <div class="mini-cow-wrap"><img class="mini-cow" src="./assets/cow.webp" alt="" /></div>
+        <p class="eyebrow">MILK / 900 mL</p>
+        <h1>ラベルを<br>ご確認ください。</h1>
+        <button class="label-button" data-next="inspection">
+          <span>CHECK LABEL</span><span aria-hidden="true">↗</span>
+        </button>
+      </div>
+      <p class="hint">ラベルをめくるように進みます</p>
+    </section>
+
+    <section class="stage" data-stage="inspection" aria-label="品質検査票">
+      <article class="paper slip tilt-left">
+        <div class="paper-head">
+          <div>
+            <p class="mono">FORM QC–1012 / A</p>
+            <h2>品質検査票</h2>
+          </div>
+          <img src="./assets/cow.webp" alt="" class="cow-mark" />
+        </div>
+        <p class="lead">3項目を順に確認してください。</p>
+        <div class="checks">
+          <button class="check-row is-ready" data-check="0">
+            <span class="num">01</span><span class="check-text"><b>外観検査</b><small>容器・ラベル</small></span><span class="result">TAP</span>
+          </button>
+          <button class="check-row" data-check="1" disabled>
+            <span class="num">02</span><span class="check-text"><b>成分表示</b><small>記載内容</small></span><span class="result">WAIT</span>
+          </button>
+          <button class="check-row" data-check="2" disabled>
+            <span class="num">03</span><span class="check-text"><b>ロット照合</b><small>製造記録</small></span><span class="result">WAIT</span>
+          </button>
+        </div>
+        <button class="paper-link" data-next="facts" hidden>表示票をめくる <span>→</span></button>
+      </article>
+    </section>
+
+    <section class="stage" data-stage="facts" aria-label="品質表示">
+      <article class="paper facts tilt-right">
+        <div class="paper-head">
+          <div>
+            <p class="mono">PRODUCT SPECIFICATION / B</p>
+            <h2>品質表示</h2>
+          </div>
+          <img src="./assets/cow.webp" alt="" class="cow-mark" />
+        </div>
+        <dl class="spec-list">
+          <div><dt>種類別名称</dt><dd>牛乳</dd></div>
+          <div><dt>原材料名</dt><dd>生乳 100%</dd></div>
+          <div><dt>内容量</dt><dd>900 mL</dd></div>
+          <div><dt>ロット</dt><dd>1012–31</dd></div>
+          <div><dt>保存方法</dt><dd>大切に保管</dd></div>
+        </dl>
+        <div class="barcode" aria-hidden="true"></div>
+        <div class="facts-foot"><span>SAMPLE 01</span><span>QC / 10.12</span></div>
+        <button class="paper-link" data-next="finale">最終検印へ <span>→</span></button>
+      </article>
+    </section>
+
+    <section class="stage" data-stage="finale" aria-label="最終検査結果">
+      <article class="paper finale">
+        <div class="stamp" aria-hidden="true"><span>FINAL</span><strong>合格</strong><span>10.12</span></div>
+        <p class="mono final-code">APPROVED / LOT 1012–31</p>
+        <h2>31歳、<br>おめでとう。</h2>
+        <p class="final-message">今年も品質に問題ありません。<br>よい一年を。</p>
+        <div class="enclosure"><span>ENCLOSURE</span><b>同梱品があります。</b></div>
+        <p class="signoff">QUALITY CONTROL / 10.12</p>
+        <button class="restart" type="button" aria-label="最初から見る">↻</button>
+      </article>
+    </section>
+
+    <footer class="bottombar">
+      <span id="stageLabel">SEALED</span>
+      <div class="progress" aria-hidden="true"><i class="active"></i><i></i><i></i><i></i></div>
+    </footer>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
